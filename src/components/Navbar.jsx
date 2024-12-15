@@ -1,12 +1,11 @@
-import React from "react";
 import logo from "../assets/logo.png";
 
 const Navbar = () => {
   return (
-    <div className="top-0 left-0 z-10">
-      <div className="flex justify-between items-center container mx-auto bg-transparent">
+    <div className="top-0 left-0 z-10 w-full absolute ">
+      <div className="flex justify-between items-center container mx-auto bg-transparent ">
         <img src={logo} className="cursor-pointer w-32" alt="" srcSet="" />
-        <ul className="hidden md:flex gap-5">
+        <ul className="hidden md:flex gap-5 text-white">
           <a href="#Header" className="cursor-pointer hover:text-gray-400">
             Home
           </a>
