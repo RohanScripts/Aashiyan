@@ -8,6 +8,13 @@ const Header = () => {
       id="Header"
     >
       <Navbar />
+      <div className="container mx-auto text-center text-white">
+        <h2>Explore homes that fits your dreams</h2>
+        <div>
+          <a href="">Projects</a>
+          <a href="">Contact Us</a>
+        </div>
+      </div>
     </div>
   );
 };
