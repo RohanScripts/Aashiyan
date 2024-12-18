@@ -19,7 +19,7 @@ const Navbar = () => {
             Testimonials
           </a>
         </ul>
-        <button className="hidden md:block bg-white px-8 py-2 rounded-full">
+        <button className="text-white hidden md:block bg-gradient-to-r from-pink-500 to-violet-500 px-7 py-1.5 rounded-full ">
           Sign Up
         </button>
       </div>

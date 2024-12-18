@@ -9,10 +9,26 @@ const Header = () => {
     >
       <Navbar />
       <div className="container mx-auto text-center text-white">
-        <h2>Explore homes that fits your dreams</h2>
-        <div>
-          <a href="">Projects</a>
-          <a href="">Contact Us</a>
+        <h2
+          className=" text-5xl inline-block max-w-4xl font-bold
+        "
+        >
+          Explore Homes That Fits Your
+          <br />
+          <span className="text-5xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
+            DREAMS..
+          </span>
+        </h2>
+        <div className="space-x-4 mt-6">
+          <a href="#Projects" className="border px-4 py-2">
+            Projects
+          </a>
+          <a
+            href="#Contact"
+            className="bg-gradient-to-r from-pink-500 to-violet-500 px-4 py-2"
+          >
+            Contact Us
+          </a>
         </div>
       </div>
     </div>
