@@ -8,7 +8,7 @@ const Header = () => {
       id="Header"
     >
       <Navbar />
-      <div className="container mx-auto text-center text-white">
+      <div className="container mx-auto text-center text-white px-7">
         <h2
           className=" text-5xl inline-block max-w-4xl font-bold
         "
