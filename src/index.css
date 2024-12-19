@@ -7,3 +7,8 @@
 * {
   font-family: Poppins;
 }
+
+/*👇 to hide vertical scrollbar on the page 👇*/
+body::-webkit-scrollbar {
+  display: none;
+}
