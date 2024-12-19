@@ -6,9 +6,15 @@
 
 * {
   font-family: Poppins;
+  scroll-behavior: smooth;
 }
 
 /*👇 to hide vertical scrollbar on the page 👇*/
 body::-webkit-scrollbar {
   display: none;
+}
+
+::selection {
+  color: white;
+  background: black;
 }
