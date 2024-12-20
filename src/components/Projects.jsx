@@ -29,11 +29,23 @@ const Projects = () => {
       </div>
 
       {/* project slider */}
-      <div className="overflow-hidden">
+      <div className="overflow-hidden mb-10">
         <div className="flex gap-4 transition-transform duration-500 ease-in-out">
           {projectsData.map((eachProject, index) => (
-            <div key={index}>
+            <div key={index} className="relative shrink-0 sm:w-1/4">
               <img src={eachProject.image} alt={eachProject.title} />
+              <div className="absolute bottom-5 flex justify-center left-0 right-0 bg-gradient-to-r from-pink-500 to-violet-500 text-white  w-4/5">
+                <div className=" ">
+                  <h2 className="text-2xl font-semibold ">
+                    {eachProject.title}
+                  </h2>
+                  <p className="text-sm">
+                    {eachProject.price}
+                    <span> | </span>
+                    {eachProject.location}
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
