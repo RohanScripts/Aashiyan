@@ -11,6 +11,12 @@ const Projects = () => {
     );
   };
 
+  const prevProject = () => {
+    setCurrentIndex((previousIndex) =>
+      previousIndex === 0 ? projectsData.length - 1 : previousIndex - 1
+    );
+  };
+
   return (
     <div className=" w-full bg-white overflow-hidden" id="Projects">
       <h1 className="text-2xl font-bold text-center mb-2">
