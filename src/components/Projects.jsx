@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { assets, projectsData } from "../assets/assets";
 
 const Projects = () => {
@@ -17,6 +17,19 @@ const Projects = () => {
     );
   };
 
+  useEffect(() => {
+    const updateCardsToShow = () => {
+      if (window.innerWidth >= 1024) {
+        setCardsToShow(projectsData.length);
+      } else {
+        setCardsToShow(1);
+      }
+    };
+    updateCardsToShow();
+    window.addEventListener("resize", updateCardsToShow);
+    return () => removeEventListener("resize", updateCardsToShow);
+  }, []);
+
   return (
     <div className=" w-full bg-white overflow-hidden" id="Projects">
       <h1 className="text-2xl font-bold text-center mb-2">
@@ -31,12 +44,14 @@ const Projects = () => {
       {/* slider buttons */}
       <div className="flex justify-end items-center">
         <button
+          onClick={prevProject}
           className="p-3 bg-gray-200 rounded mb-6"
           aria-label="Previous Projects"
         >
           <img src={assets.left_arrow} alt="Previous" />
         </button>
         <button
+          onClick={nextProject}
           className="p-3 bg-gray-200 rounded mb-6"
           aria-label="Next Projects"
         >
@@ -46,7 +61,12 @@ const Projects = () => {
 
       {/* project slider */}
       <div className="overflow-hidden mb-10">
-        <div className="flex gap-4 transition-transform duration-500 ease-in-out">
+        <div
+          style={{
+            transform: `translateX(-${(currentIndex * 100) / cardsToShow}%)`,
+          }}
+          className="flex gap-4 transition-transform duration-500 ease-in-out"
+        >
           {projectsData.map((eachProject, index) => (
             <div key={index} className="relative shrink-0 sm:w-1/4">
               <img src={eachProject.image} alt={eachProject.title} />

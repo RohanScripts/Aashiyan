@@ -3,7 +3,7 @@ import { assets } from "../assets/assets";
 const About = () => {
   return (
     <div
-      className="flex flex-col items-center  w-full overflow-hidden bg-white p-10"
+      className="flex flex-col items-center justify-center w-full overflow-hidden bg-white  p-5"
       id="About"
     >
       <h1 className="text-2xl font-bold ">
@@ -13,7 +13,7 @@ const About = () => {
         </span>
       </h1>
       <p>Passionate About Properties, Dedicated to Your Vision</p>
-      <div className="flex flex-col md:flex-row items-center md:items-start md:gap-16 mt-16">
+      <div className="flex flex-col md:flex-row items-center md:items-start md:gap-16 mt-16 ">
         <img src={assets.brand_img} className=" sm:w-1/2 max-w-sm" alt="" />
         <div className="flex  flex-col gap-8 mt-10 ">
           <div className="grid grid-cols-2 w-full gap-5 ">
