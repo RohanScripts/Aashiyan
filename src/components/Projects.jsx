@@ -1,6 +1,16 @@
+import { useState } from "react";
 import { assets, projectsData } from "../assets/assets";
 
 const Projects = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [cardsToShow, setCardsToShow] = useState(1);
+
+  const nextProject = () => {
+    setCurrentIndex(
+      (previousIndex) => (previousIndex + 1) % projectsData.length
+    );
+  };
+
   return (
     <div className=" w-full bg-white overflow-hidden" id="Projects">
       <h1 className="text-2xl font-bold text-center mb-2">
