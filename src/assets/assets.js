@@ -77,7 +77,7 @@ export const testimonialsData = [
     image: profile_img_1,
     alt: "Portrait of Donald Jackman",
     rating: 5,
-    text: "From the very first meeting, they understood my vision and helped me find the perfect property. Their attention to detail and commitment to client satisfaction is unmatched.",
+    text: "Finding my dream home was a breeze! The team was incredibly helpful and made the process stress-free. Highly recommend!",
   },
   {
     name: "Richard Nelson",
@@ -85,7 +85,7 @@ export const testimonialsData = [
     image: profile_img_2,
     alt: "Portrait of Richard Nelson",
     rating: 4,
-    text: "From the very first meeting, they understood my vision and helped me find the perfect property. Their attention to detail and commitment to client satisfaction is unmatched.",
+    text: "The professionalism and attention to detail were outstanding. I’m thrilled with my new home and the service I received.",
   },
   {
     name: "James Washington",
@@ -93,6 +93,6 @@ export const testimonialsData = [
     image: profile_img_3,
     alt: "Portrait of James Washington",
     rating: 5,
-    text: "From the very first meeting, they understood my vision and helped me find the perfect property. Their attention to detail and commitment to client satisfaction is unmatched.",
+    text: "Excellent experience from start to finish. The team truly understood my needs and delivered beyond expectations!",
   },
 ];
