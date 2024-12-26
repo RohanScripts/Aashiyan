@@ -1,8 +1,13 @@
 import { assets } from "../assets/assets";
+import { motion } from "motion/react";
 
 const About = () => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, x: 200 }}
+      transition={{ duration: 1 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
       className="flex flex-col items-center justify-center w-full overflow-hidden bg-white  p-5"
       id="About"
     >
@@ -53,7 +58,7 @@ const About = () => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

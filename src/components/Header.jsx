@@ -1,4 +1,5 @@
 import Navbar from "./Navbar";
+import { motion } from "motion/react";
 
 const Header = () => {
   return (
@@ -8,7 +9,13 @@ const Header = () => {
       id="Header"
     >
       <Navbar />
-      <div className="container mx-auto text-center text-white px-7">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        transition={{ duration: 1 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="container mx-auto text-center text-white px-7"
+      >
         <h2
           className=" text-5xl inline-block max-w-4xl font-bold
         "
@@ -30,7 +37,7 @@ const Header = () => {
             Contact Us
           </a>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
