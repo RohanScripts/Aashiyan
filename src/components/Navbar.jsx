@@ -2,8 +2,24 @@ import logo from "../assets/logo.png";
 import { assets } from "../assets/assets";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { signOut } from "firebase/auth";
+import { auth } from "../../fire";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth);
+      toast.success("Successfully Signed Out");
+      navigate("/");
+    } catch (error) {
+      toast.error(error.message);
+    }
+  };
+
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   // try below if any error in scrolling
@@ -38,8 +54,11 @@ const Navbar = () => {
             Testimonials
           </a>
         </ul>
-        <button className="text-white hidden md:block bg-gradient-to-r from-pink-500 to-violet-500 px-7 py-1.5 rounded-full ">
-          Sign Up
+        <button
+          onClick={handleSignOut}
+          className="text-white hidden md:block bg-gradient-to-r from-pink-500 to-violet-500 px-7 py-1.5 rounded-full "
+        >
+          Sign Out
         </button>
         <img
           onClick={() => setShowMobileMenu(true)}
