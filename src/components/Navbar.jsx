@@ -108,6 +108,9 @@ const Navbar = () => {
           >
             Testimonials
           </a>
+          <a onClick={handleSignOut} href="">
+            Sign Out
+          </a>
         </ul>
       </div>
     </div>

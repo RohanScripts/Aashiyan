@@ -25,7 +25,7 @@ const Login = () => {
       className="w-full h-screen flex justify-center items-center bg-fixed bg-center bg-no-repeat bg-cover"
       style={{ backgroundImage: "url('/header_img.png')" }}
     >
-      <div className="w-1/3 h-2/4  flex items-center flex-col justify-center gap-4 bg-gradient-to-r from-pink-500 to-violet-500 rounded">
+      <div className="sm:w-2/3 sm:h-4/5 p-5 lg:w-1/3 lg:h-2/4  flex items-center flex-col justify-center gap-4 bg-gradient-to-r from-pink-500 to-violet-500 rounded">
         <img src={logo} className="w-48" alt="" />
         <h1 className="text-white text-3xl font-semibold">
           Sign In With Google

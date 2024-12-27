@@ -42,17 +42,17 @@ const Projects = () => {
         Crafting Spaces, Building Legacies-Explore Our Portfolio
       </p>
       {/* slider buttons */}
-      <div className="flex justify-end items-center">
+      <div className="flex justify-between items-center">
         <button
           onClick={prevProject}
-          className="p-3 bg-gray-200 rounded mb-6"
+          className="p-5 bg-gray-200 rounded mb-6"
           aria-label="Previous Projects"
         >
           <img src={assets.left_arrow} alt="Previous" />
         </button>
         <button
           onClick={nextProject}
-          className="p-3 bg-gray-200 rounded mb-6"
+          className="p-5 bg-gray-200 rounded mb-6"
           aria-label="Next Projects"
         >
           <img src={assets.right_arrow} alt="Next" />
